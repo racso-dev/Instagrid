@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		760F3F89233188FA00FD0421 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760F3F88233188FA00FD0421 /* EditorView.swift */; };
+		760F3FB12337A05700FD0421 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760F3FB02337A05700FD0421 /* SelectionView.swift */; };
+		763AC338233BEFD2001B2C97 /* EditorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763AC337233BEFD2001B2C97 /* EditorView.xib */; };
+		763E8DCB2339721900410DA7 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E8DCA2339721900410DA7 /* Converter.swift */; };
+		7641634A232BC4F500B9DACB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76416349232BC4F500B9DACB /* AppDelegate.swift */; };
+		7641634C232BC4F500B9DACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7641634B232BC4F500B9DACB /* ViewController.swift */; };
+		7641634F232BC4F500B9DACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7641634D232BC4F500B9DACB /* Main.storyboard */; };
+		76416351232BC4F600B9DACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76416350232BC4F600B9DACB /* Assets.xcassets */; };
+		76416354232BC4F600B9DACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76416352232BC4F600B9DACB /* LaunchScreen.storyboard */; };
+		76416360232BC7C000B9DACB /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7641635F232BC7C000B9DACB /* ThirstySoftRegular.otf */; };
+		76416362232BC7CF00B9DACB /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76416361232BC7CF00B9DACB /* Delm-Medium.otf */; };
+		767DCB5B23738DF700014E4E /* SelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 767DCB5A23738DF700014E4E /* SelectionView.xib */; };
+		76E1A899238B0120006FECC2 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E1A898238B011F006FECC2 /* SwipeView.swift */; };
+		76E1A89B238B014A006FECC2 /* SwipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E1A89A238B014A006FECC2 /* SwipeView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		760F3F88233188FA00FD0421 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		760F3FB02337A05700FD0421 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		763AC337233BEFD2001B2C97 /* EditorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorView.xib; sourceTree = "<group>"; };
+		763E8DCA2339721900410DA7 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		76416346232BC4F500B9DACB /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76416349232BC4F500B9DACB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7641634B232BC4F500B9DACB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7641634E232BC4F500B9DACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76416350232BC4F600B9DACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76416353232BC4F600B9DACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76416355232BC4F600B9DACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7641635F232BC7C000B9DACB /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		76416361232BC7CF00B9DACB /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		767DCB5A23738DF700014E4E /* SelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionView.xib; sourceTree = "<group>"; };
+		76E1A898238B011F006FECC2 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		76E1A89A238B014A006FECC2 /* SwipeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76416343232BC4F500B9DACB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7641633D232BC4F500B9DACB = {
+			isa = PBXGroup;
+			children = (
+				76416348232BC4F500B9DACB /* Instagrid */,
+				76416347232BC4F500B9DACB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76416347232BC4F500B9DACB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76416346232BC4F500B9DACB /* Instagrid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76416348232BC4F500B9DACB /* Instagrid */ = {
+			isa = PBXGroup;
+			children = (
+				7641635B232BC50C00B9DACB /* Model */,
+				7641635C232BC51C00B9DACB /* View */,
+				7641635D232BC52300B9DACB /* Controller */,
+				7641635E232BC52A00B9DACB /* Supporting files */,
+			);
+			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		7641635B232BC50C00B9DACB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				763E8DCA2339721900410DA7 /* Converter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7641635C232BC51C00B9DACB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				760F3F88233188FA00FD0421 /* EditorView.swift */,
+				760F3FB02337A05700FD0421 /* SelectionView.swift */,
+				76E1A898238B011F006FECC2 /* SwipeView.swift */,
+				763AC337233BEFD2001B2C97 /* EditorView.xib */,
+				767DCB5A23738DF700014E4E /* SelectionView.xib */,
+				76E1A89A238B014A006FECC2 /* SwipeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7641635D232BC52300B9DACB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7641634D232BC4F500B9DACB /* Main.storyboard */,
+				7641634B232BC4F500B9DACB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7641635E232BC52A00B9DACB /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				76416350232BC4F600B9DACB /* Assets.xcassets */,
+				76416361232BC7CF00B9DACB /* Delm-Medium.otf */,
+				7641635F232BC7C000B9DACB /* ThirstySoftRegular.otf */,
+				76416352232BC4F600B9DACB /* LaunchScreen.storyboard */,
+				76416349232BC4F500B9DACB /* AppDelegate.swift */,
+				76416355232BC4F600B9DACB /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76416345232BC4F500B9DACB /* Instagrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76416358232BC4F600B9DACB /* Build configuration list for PBXNativeTarget "Instagrid" */;
+			buildPhases = (
+				76416342232BC4F500B9DACB /* Sources */,
+				76416343232BC4F500B9DACB /* Frameworks */,
+				76416344232BC4F500B9DACB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Instagrid;
+			productName = Instagrid;
+			productReference = 76416346232BC4F500B9DACB /* Instagrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7641633E232BC4F500B9DACB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Oscar RENIER";
+				TargetAttributes = {
+					76416345232BC4F500B9DACB = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 76416341232BC4F500B9DACB /* Build configuration list for PBXProject "Instagrid" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7641633D232BC4F500B9DACB;
+			productRefGroup = 76416347232BC4F500B9DACB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76416345232BC4F500B9DACB /* Instagrid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76416344232BC4F500B9DACB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76416354232BC4F600B9DACB /* LaunchScreen.storyboard in Resources */,
+				76E1A89B238B014A006FECC2 /* SwipeView.xib in Resources */,
+				763AC338233BEFD2001B2C97 /* EditorView.xib in Resources */,
+				76416362232BC7CF00B9DACB /* Delm-Medium.otf in Resources */,
+				76416351232BC4F600B9DACB /* Assets.xcassets in Resources */,
+				767DCB5B23738DF700014E4E /* SelectionView.xib in Resources */,
+				76416360232BC7C000B9DACB /* ThirstySoftRegular.otf in Resources */,
+				7641634F232BC4F500B9DACB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76416342232BC4F500B9DACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763E8DCB2339721900410DA7 /* Converter.swift in Sources */,
+				760F3F89233188FA00FD0421 /* EditorView.swift in Sources */,
+				7641634C232BC4F500B9DACB /* ViewController.swift in Sources */,
+				76E1A899238B0120006FECC2 /* SwipeView.swift in Sources */,
+				7641634A232BC4F500B9DACB /* AppDelegate.swift in Sources */,
+				760F3FB12337A05700FD0421 /* SelectionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7641634D232BC4F500B9DACB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7641634E232BC4F500B9DACB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76416352232BC4F600B9DACB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76416353232BC4F600B9DACB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76416356232BC4F600B9DACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: oscar.renier@gmail.com (LU8WS759JZ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76416357232BC4F600B9DACB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: oscar.renier@gmail.com (LU8WS759JZ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76416359232BC4F600B9DACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JP3P3KT9U9;
+				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscar-renier.Instagrid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7641635A232BC4F600B9DACB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JP3P3KT9U9;
+				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oscar-renier.Instagrid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76416341232BC4F500B9DACB /* Build configuration list for PBXProject "Instagrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76416356232BC4F600B9DACB /* Debug */,
+				76416357232BC4F600B9DACB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76416358232BC4F600B9DACB /* Build configuration list for PBXNativeTarget "Instagrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76416359232BC4F600B9DACB /* Debug */,
+				7641635A232BC4F600B9DACB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7641633E232BC4F500B9DACB /* Project object */;
+}

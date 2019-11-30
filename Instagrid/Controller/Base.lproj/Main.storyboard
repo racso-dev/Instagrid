@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9M-oM-FrJ" customClass="WrapperEditorView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="10" y="134" width="300" height="300"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nibName">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Obb-lJ-LfB"/>
+                                    <constraint firstAttribute="height" constant="300" id="Qlz-5d-JEX"/>
+                                    <constraint firstAttribute="width" constant="250" id="uvT-WO-mMr"/>
+                                    <constraint firstAttribute="height" constant="250" id="wLh-iJ-Abn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Obb-lJ-LfB"/>
+                                        <exclude reference="Qlz-5d-JEX"/>
+                                        <exclude reference="uvT-WO-mMr"/>
+                                        <exclude reference="wLh-iJ-Abn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="uvT-WO-mMr"/>
+                                        <include reference="wLh-iJ-Abn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Obb-lJ-LfB"/>
+                                        <include reference="Qlz-5d-JEX"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbE-gw-Bmj">
+                                <rect key="frame" x="106.5" y="0.0" width="107" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7uH-sl-pNM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="twa-bq-Mmh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOz-MM-ihR" customClass="WrapperSelectionView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="10" y="468" width="300" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="3gG-05-ZTK"/>
+                                    <constraint firstAttribute="height" constant="250" id="X23-m4-8rE"/>
+                                    <constraint firstAttribute="width" constant="90" id="YWU-2T-MK0"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZIB-Ws-MCS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3gG-05-ZTK"/>
+                                        <exclude reference="X23-m4-8rE"/>
+                                        <exclude reference="YWU-2T-MK0"/>
+                                        <exclude reference="ZIB-Ws-MCS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="X23-m4-8rE"/>
+                                        <include reference="YWU-2T-MK0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3gG-05-ZTK"/>
+                                        <include reference="ZIB-Ws-MCS"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6o-o9-hmu" customClass="WrapperSwipeView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="82" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6lj-EN-dkr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xbE-gw-Bmj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3GD-Zm-3kz"/>
+                            <constraint firstItem="X6o-o9-hmu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5E4-By-TLl"/>
+                            <constraint firstItem="V9M-oM-FrJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="744-2Z-MkB"/>
+                            <constraint firstItem="uOz-MM-ihR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7j1-Oq-daR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X6o-o9-hmu" secondAttribute="trailing" id="HEo-nE-Xf4"/>
+                            <constraint firstItem="uOz-MM-ihR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hs3-KB-w3w"/>
+                            <constraint firstItem="uOz-MM-ihR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="LB7-n8-5dv"/>
+                            <constraint firstItem="V9M-oM-FrJ" firstAttribute="top" secondItem="X6o-o9-hmu" secondAttribute="bottom" constant="8" id="R2e-9r-feP"/>
+                            <constraint firstItem="X6o-o9-hmu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WeP-Zx-Avy"/>
+                            <constraint firstItem="xbE-gw-Bmj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZdO-o1-uBc"/>
+                            <constraint firstItem="X6o-o9-hmu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dIF-OF-ukk"/>
+                            <constraint firstItem="V9M-oM-FrJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gUD-AI-Lvy"/>
+                            <constraint firstItem="uOz-MM-ihR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qtd-mS-ZK2"/>
+                            <constraint firstItem="V9M-oM-FrJ" firstAttribute="leading" secondItem="X6o-o9-hmu" secondAttribute="trailing" id="xfr-C1-46z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HEo-nE-Xf4"/>
+                                <exclude reference="5E4-By-TLl"/>
+                                <exclude reference="WeP-Zx-Avy"/>
+                                <exclude reference="dIF-OF-ukk"/>
+                                <exclude reference="R2e-9r-feP"/>
+                                <exclude reference="xfr-C1-46z"/>
+                                <exclude reference="7j1-Oq-daR"/>
+                                <exclude reference="Hs3-KB-w3w"/>
+                                <exclude reference="LB7-n8-5dv"/>
+                                <exclude reference="qtd-mS-ZK2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="7j1-Oq-daR"/>
+                                <include reference="Hs3-KB-w3w"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="WeP-Zx-Avy"/>
+                                <include reference="dIF-OF-ukk"/>
+                                <include reference="xfr-C1-46z"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="HEo-nE-Xf4"/>
+                                <include reference="5E4-By-TLl"/>
+                                <include reference="R2e-9r-feP"/>
+                                <include reference="LB7-n8-5dv"/>
+                                <include reference="qtd-mS-ZK2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="editorView" destination="V9M-oM-FrJ" id="jfn-qH-TC8"/>
+                        <outlet property="selectionView" destination="uOz-MM-ihR" id="ID9-8g-MPs"/>
+                        <outlet property="swipeView" destination="X6o-o9-hmu" id="8Uo-BV-wXy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.25352112676056" y="13.125"/>
+        </scene>
+    </scenes>
+</document>

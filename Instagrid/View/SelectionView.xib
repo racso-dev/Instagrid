@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectionView" customModule="Instagrid" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmv-jQ-b8e" customClass="SelectionView" customModule="Instagrid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QK-Oe-E3C">
+                    <rect key="frame" x="10" y="110" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Lpr-s5-2Rs"/>
+                        <constraint firstAttribute="height" constant="80" id="MwP-lQ-91P"/>
+                        <constraint firstAttribute="width" constant="65" id="m8I-bt-Jig"/>
+                        <constraint firstAttribute="height" constant="65" id="xeu-GW-2nv"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Layout 1"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Lpr-s5-2Rs"/>
+                            <exclude reference="MwP-lQ-91P"/>
+                            <exclude reference="m8I-bt-Jig"/>
+                            <exclude reference="xeu-GW-2nv"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="m8I-bt-Jig"/>
+                            <include reference="xeu-GW-2nv"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Lpr-s5-2Rs"/>
+                            <include reference="MwP-lQ-91P"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didSelectLayout1" destination="qmv-jQ-b8e" eventType="touchUpInside" id="PcB-um-3tD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-MO-6Ht">
+                    <rect key="frame" x="110" y="110" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="afe-IN-sfe"/>
+                        <constraint firstAttribute="width" constant="65" id="hVD-G5-mqe"/>
+                        <constraint firstAttribute="height" constant="80" id="iJS-tD-hRQ"/>
+                        <constraint firstAttribute="width" constant="80" id="t3h-dk-P3B"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Layout 2"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="afe-IN-sfe"/>
+                            <exclude reference="hVD-G5-mqe"/>
+                            <exclude reference="iJS-tD-hRQ"/>
+                            <exclude reference="t3h-dk-P3B"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="afe-IN-sfe"/>
+                            <include reference="hVD-G5-mqe"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="iJS-tD-hRQ"/>
+                            <include reference="t3h-dk-P3B"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didSelectLayout2" destination="qmv-jQ-b8e" eventType="touchUpInside" id="kTt-9N-WbQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsk-cH-x8o">
+                    <rect key="frame" x="210" y="110" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="S3a-1Q-zmY"/>
+                        <constraint firstAttribute="width" constant="80" id="Yam-K7-MJr"/>
+                        <constraint firstAttribute="height" constant="80" id="bnK-dj-Z2a"/>
+                        <constraint firstAttribute="width" constant="65" id="hwU-6a-Yn9"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Layout 3"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="S3a-1Q-zmY"/>
+                            <exclude reference="Yam-K7-MJr"/>
+                            <exclude reference="bnK-dj-Z2a"/>
+                            <exclude reference="hwU-6a-Yn9"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="S3a-1Q-zmY"/>
+                            <include reference="hwU-6a-Yn9"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Yam-K7-MJr"/>
+                            <include reference="bnK-dj-Z2a"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didSelectLayout3" destination="qmv-jQ-b8e" eventType="touchUpInside" id="Yl2-TV-tNL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="nibName">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="Zsk-cH-x8o" firstAttribute="centerX" secondItem="qmv-jQ-b8e" secondAttribute="centerX" id="1UU-3e-CU0"/>
+                <constraint firstItem="0QK-Oe-E3C" firstAttribute="centerX" secondItem="qmv-jQ-b8e" secondAttribute="centerX" id="7r8-sY-FjJ"/>
+                <constraint firstItem="dYs-MO-6Ht" firstAttribute="centerX" secondItem="qmv-jQ-b8e" secondAttribute="centerX" id="AjA-1O-7xJ"/>
+                <constraint firstItem="dYs-MO-6Ht" firstAttribute="top" secondItem="0QK-Oe-E3C" secondAttribute="bottom" constant="20" id="BB0-Ej-n0J"/>
+                <constraint firstItem="dYs-MO-6Ht" firstAttribute="leading" secondItem="0QK-Oe-E3C" secondAttribute="trailing" constant="20" id="Gc5-is-4At"/>
+                <constraint firstItem="0QK-Oe-E3C" firstAttribute="centerY" secondItem="qmv-jQ-b8e" secondAttribute="centerY" id="Hxg-hH-IXG"/>
+                <constraint firstItem="Zsk-cH-x8o" firstAttribute="top" secondItem="dYs-MO-6Ht" secondAttribute="bottom" constant="20" id="T2V-9Y-UZS"/>
+                <constraint firstItem="Zsk-cH-x8o" firstAttribute="leading" secondItem="dYs-MO-6Ht" secondAttribute="trailing" constant="20" id="aSd-fF-E6F"/>
+                <constraint firstItem="dYs-MO-6Ht" firstAttribute="centerY" secondItem="qmv-jQ-b8e" secondAttribute="centerY" id="bg1-ph-swP"/>
+                <constraint firstItem="dYs-MO-6Ht" firstAttribute="centerY" secondItem="qmv-jQ-b8e" secondAttribute="centerY" id="irw-Ls-YLa"/>
+                <constraint firstItem="Zsk-cH-x8o" firstAttribute="centerY" secondItem="qmv-jQ-b8e" secondAttribute="centerY" id="y6k-kJ-A7i"/>
+                <constraint firstItem="dYs-MO-6Ht" firstAttribute="centerX" secondItem="qmv-jQ-b8e" secondAttribute="centerX" id="zhx-ym-8zG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="xD2-zI-L2R"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7r8-sY-FjJ"/>
+                    <exclude reference="Hxg-hH-IXG"/>
+                    <exclude reference="AjA-1O-7xJ"/>
+                    <exclude reference="BB0-Ej-n0J"/>
+                    <exclude reference="Gc5-is-4At"/>
+                    <exclude reference="bg1-ph-swP"/>
+                    <exclude reference="irw-Ls-YLa"/>
+                    <exclude reference="zhx-ym-8zG"/>
+                    <exclude reference="1UU-3e-CU0"/>
+                    <exclude reference="T2V-9Y-UZS"/>
+                    <exclude reference="aSd-fF-E6F"/>
+                    <exclude reference="y6k-kJ-A7i"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="7r8-sY-FjJ"/>
+                    <include reference="AjA-1O-7xJ"/>
+                    <include reference="BB0-Ej-n0J"/>
+                    <include reference="irw-Ls-YLa"/>
+                    <include reference="1UU-3e-CU0"/>
+                    <include reference="T2V-9Y-UZS"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="Hxg-hH-IXG"/>
+                    <include reference="Gc5-is-4At"/>
+                    <include reference="bg1-ph-swP"/>
+                    <include reference="zhx-ym-8zG"/>
+                    <include reference="aSd-fF-E6F"/>
+                    <include reference="y6k-kJ-A7i"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="leftLay" destination="0QK-Oe-E3C" id="4mV-ec-H1Q"/>
+                <outlet property="midLay" destination="dYs-MO-6Ht" id="imV-K2-ukK"/>
+                <outlet property="rightLay" destination="Zsk-cH-x8o" id="fSF-aG-Na8"/>
+            </connections>
+            <point key="canvasLocation" x="99" y="814"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Layout 1" width="80" height="80"/>
+        <image name="Layout 2" width="80" height="80"/>
+        <image name="Layout 3" width="80" height="80"/>
+    </resources>
+</document>

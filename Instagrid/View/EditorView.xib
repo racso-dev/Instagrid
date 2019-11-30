@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qus-wB-Oav" customClass="EditorView" customModule="Instagrid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <subviews>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-70-fQ3">
+                    <rect key="frame" x="15" y="15" width="127.5" height="127.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127.5" id="7pB-E8-GcF"/>
+                        <constraint firstAttribute="width" constant="102" id="zEo-XZ-qLy"/>
+                    </constraints>
+                    <state key="normal" image="Plus"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7pB-E8-GcF"/>
+                            <exclude reference="zEo-XZ-qLy"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="zEo-XZ-qLy"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7pB-E8-GcF"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didAddPic1:" destination="Qus-wB-Oav" eventType="touchUpInside" id="yFl-Oh-4zc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z27-Na-35H">
+                    <rect key="frame" x="157.5" y="15" width="127.5" height="127.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="127.5" id="O4B-m9-qee"/>
+                        <constraint firstAttribute="width" constant="102" id="p9y-Ot-geR"/>
+                    </constraints>
+                    <state key="normal" image="Plus"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="O4B-m9-qee"/>
+                            <exclude reference="p9y-Ot-geR"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="p9y-Ot-geR"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="O4B-m9-qee"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didAddPic2:" destination="Qus-wB-Oav" eventType="touchUpInside" id="iwM-ba-hM8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjW-UK-Ahw">
+                    <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="6Jo-vx-Bxi"/>
+                        <constraint firstAttribute="width" constant="220" id="gVk-xd-ehG"/>
+                    </constraints>
+                    <state key="normal" image="Plus"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6Jo-vx-Bxi"/>
+                            <exclude reference="gVk-xd-ehG"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="gVk-xd-ehG"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="6Jo-vx-Bxi"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didAddPic3:" destination="Qus-wB-Oav" eventType="touchUpInside" id="033-FI-K2a"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILH-Ls-byr">
+                    <rect key="frame" x="157.5" y="157.5" width="127.5" height="127.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="0WC-LC-aDn"/>
+                        <constraint firstAttribute="height" constant="127.5" id="KBy-Rk-tTd"/>
+                        <constraint firstAttribute="height" constant="102" id="POu-07-JKJ"/>
+                        <constraint firstAttribute="width" constant="127.5" id="kkI-HF-L2F"/>
+                    </constraints>
+                    <state key="normal" image="Plus"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0WC-LC-aDn"/>
+                            <exclude reference="KBy-Rk-tTd"/>
+                            <exclude reference="POu-07-JKJ"/>
+                            <exclude reference="kkI-HF-L2F"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="0WC-LC-aDn"/>
+                            <include reference="POu-07-JKJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="KBy-Rk-tTd"/>
+                            <include reference="kkI-HF-L2F"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="didAddPic4:" destination="Qus-wB-Oav" eventType="touchUpInside" id="ZfX-28-hKG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="nibName">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="vjW-UK-Ahw" firstAttribute="leading" secondItem="aZ9-o0-gJX" secondAttribute="leading" constant="15" id="Ada-kI-M5A"/>
+                <constraint firstItem="aZ9-o0-gJX" firstAttribute="trailing" secondItem="Z27-Na-35H" secondAttribute="trailing" constant="15" id="C0V-Tz-ABu"/>
+                <constraint firstItem="ILH-Ls-byr" firstAttribute="height" secondItem="vjW-UK-Ahw" secondAttribute="height" id="DE5-CG-wG4"/>
+                <constraint firstItem="aZ9-o0-gJX" firstAttribute="bottom" secondItem="ILH-Ls-byr" secondAttribute="bottom" constant="15" id="Ljg-cC-fHp"/>
+                <constraint firstItem="5DS-70-fQ3" firstAttribute="top" secondItem="Qus-wB-Oav" secondAttribute="top" constant="15" id="Myd-sY-OG0"/>
+                <constraint firstItem="ILH-Ls-byr" firstAttribute="height" secondItem="5DS-70-fQ3" secondAttribute="height" id="R7W-q4-BGH"/>
+                <constraint firstItem="aZ9-o0-gJX" firstAttribute="bottom" secondItem="vjW-UK-Ahw" secondAttribute="bottom" constant="15" id="aa7-cS-Z2D"/>
+                <constraint firstItem="aZ9-o0-gJX" firstAttribute="trailing" secondItem="ILH-Ls-byr" secondAttribute="trailing" constant="15" id="bHS-TT-dZG"/>
+                <constraint firstItem="5DS-70-fQ3" firstAttribute="leading" secondItem="aZ9-o0-gJX" secondAttribute="leading" constant="15" id="cQL-ur-U4Z"/>
+                <constraint firstItem="Z27-Na-35H" firstAttribute="top" secondItem="Qus-wB-Oav" secondAttribute="top" constant="15" id="lyT-ct-daX"/>
+                <constraint firstItem="ILH-Ls-byr" firstAttribute="height" secondItem="Z27-Na-35H" secondAttribute="height" id="ola-le-DmD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="aZ9-o0-gJX"/>
+            <connections>
+                <outlet property="downLeft" destination="vjW-UK-Ahw" id="x37-V9-4mG"/>
+                <outlet property="downLeftWidth" destination="6Jo-vx-Bxi" id="hL7-bD-Ly2"/>
+                <outlet property="downLeftWidthLandscape" destination="gVk-xd-ehG" id="4qz-br-EBB"/>
+                <outlet property="downRight" destination="ILH-Ls-byr" id="Pcx-2N-rDP"/>
+                <outlet property="upLeft" destination="5DS-70-fQ3" id="uA0-nZ-Mf1"/>
+                <outlet property="upLeftWidth" destination="7pB-E8-GcF" id="8qc-yD-1qJ"/>
+                <outlet property="upLeftWidthLandscape" destination="zEo-XZ-qLy" id="xd1-k7-pJw"/>
+                <outlet property="upRight" destination="Z27-Na-35H" id="j6K-RH-CWL"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="796"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Plus" width="40" height="40"/>
+    </resources>
+</document>
