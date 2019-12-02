@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CreationViewController.swift
 //  Instagrid
 //
 //  Created by Oscar RENIER on 13/09/2019.
@@ -10,58 +10,34 @@ import UIKit
 
 
 
-// MARK: -
-class ViewController: UIViewController, UINavigationControllerDelegate {
+// MARK: - Controller
 
 
-    // MARK: - All outlets subviews
+
+/// The creation view controller that coordinates all views
+class CreationViewController: UIViewController, UINavigationControllerDelegate {
+
+    // MARK: - Properties
+
+
+
+    // All outlets subviews
     @IBOutlet weak var editorView: WrapperEditorView!
     @IBOutlet weak var selectionView: WrapperSelectionView!
     @IBOutlet weak var swipeView: WrapperSwipeView!
 
 
 
-    // MARK: - Instantiates a Converter class used to convert a UIView to a UIImage
+    /// Instance of the Converter class that used to convert a UIView to a UIImage
     var convert = Converter()
 
 
 
-    // MARK: - Method that animates editorView and swipeView whenever a swipe occurs
-    private func animateViews(posX: CGFloat, posY: CGFloat, duration: TimeInterval, reversed: Bool) {
-
-        let widthEditorView = self.editorView.contentView.bounds.width as CGFloat
-        let heightEditorView = self.editorView.contentView.bounds.height as CGFloat
-
-        let widthSwipeView = self.swipeView.contentView.bounds.width as CGFloat
-        let heightSwipeView = self.swipeView.contentView.bounds.height as CGFloat
-
-        UIView.animate(withDuration: duration) {
-            
-            self.editorView.contentView.frame = CGRect(x: posX, y: posY, width: widthEditorView, height: heightEditorView)
-            self.swipeView.contentView.frame = CGRect(x: posX, y: posY, width: widthSwipeView, height: heightSwipeView)
-        }
-    }
+    // MARK: - Sharing flow
 
 
 
-    // MARK: - Called right after a swipe occurs to show the UIActivityViewController
-    private func shareImage() {
-
-        let image = self.convert.viewToUIImage(with: self.editorView.contentView)
-        
-        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
-        shareController.completionWithItemsHandler = { activity, success, items, error in
-            if !success {
-                self.animateViews(posX: 0, posY: 0, duration: 0.1, reversed: true)
-            }
-        }
-        self.present(shareController, animated: true, completion: nil)
-
-    }
-
-
-
-    // MARK: - Call the appropriate animation according to the orientation of the screen
+    /// Call the appropriate animation whenever a swipe to share occurs according to the orientation of the screen
     @objc func swipeInterpretor(_ sender: UISwipeGestureRecognizer) {
 
         switch sender.direction {
@@ -83,7 +59,71 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
 
 
-    // MARK: - Loading the view
+//    /// Method called whenever a swipe occurs to check if all the displayed EditorView's buttons are filled with a user selected image
+//    private func isEditorViewReadyToBeShared() -> Bool {
+//
+//        let editorViewButtons = [editorView.contentView.upLeft, editorView.contentView.upRight, editorView.contentView.downLeft, editorView.contentView.downRight]
+//
+//        for button in editorViewButtons {
+//
+//            if !button!.isHidden {
+//
+//                if (button?.currentImage != nil) {
+//
+//                    continue
+//
+//                } else {
+//
+//                    return false
+//
+//                }
+//
+//            }
+//
+//        }
+//
+//        return true
+//
+//    }
+
+
+
+    /// Called right after a swipe occurs to show the UIActivityViewController
+    private func shareImage() {
+
+        let image = self.convert.viewToUIImage(with: self.editorView.contentView)
+
+        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        shareController.completionWithItemsHandler = { activity, success, items, error in
+            if !success {
+                self.animateViews(posX: 0, posY: 0, duration: 0.1, reversed: true)
+            }
+        }
+        self.present(shareController, animated: true, completion: nil)
+
+    }
+
+
+
+    /// Method that animates editorView and swipeView whenever a swipe occurs
+    private func animateViews(posX: CGFloat, posY: CGFloat, duration: TimeInterval, reversed: Bool) {
+
+        let widthEditorView = self.editorView.contentView.bounds.width as CGFloat
+        let heightEditorView = self.editorView.contentView.bounds.height as CGFloat
+
+        let widthSwipeView = self.swipeView.contentView.bounds.width as CGFloat
+        let heightSwipeView = self.swipeView.contentView.bounds.height as CGFloat
+
+        UIView.animate(withDuration: duration) {
+
+            self.editorView.contentView.frame = CGRect(x: posX, y: posY, width: widthEditorView, height: heightEditorView)
+            self.swipeView.contentView.frame = CGRect(x: posX, y: posY, width: widthSwipeView, height: heightSwipeView)
+        }
+    }
+
+
+
+    // MARK: - View's life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -106,8 +146,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
 
 
-// MARK: - Implementation of the EditorViewDelegate to notify the controller when a pic needs to be added to the pressed button
-extension ViewController: EditorViewDelegate {
+// MARK: - CreationViewController's extensions
+
+
+
+/// Implementation of the EditorViewDelegate to notify the controller when a pic needs to be added to the pressed button
+extension CreationViewController: EditorViewDelegate {
 
     func addPicToButtonPressed() {
         let actionSheet = UIAlertController(title: "Source", message: "", preferredStyle: .actionSheet)
@@ -136,7 +180,7 @@ extension ViewController: EditorViewDelegate {
 
 
 // MARK: - Implementation of the SelectionViewDelegate to notify the controller that the EditorView's style needs to be updated according to the selected layout
-extension ViewController: SelectionViewDelegate {
+extension CreationViewController: SelectionViewDelegate {
 
     func updateEditorViewStyle(selectionViewStyle: SelectionView.Style) {
         switch selectionViewStyle {
@@ -148,14 +192,14 @@ extension ViewController: SelectionViewDelegate {
             editorView.contentView.style = .layout3
         }
     }
-    
+
 }
 
 
 
 
 // MARK: - Implementation of the UIImagePickerControllerDelegate to implement the imagePickerController function that is called when a pic needs to be selected
-extension ViewController: UIImagePickerControllerDelegate {
+extension CreationViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {

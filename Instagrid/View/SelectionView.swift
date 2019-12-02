@@ -10,7 +10,11 @@ import UIKit
 
 
 
-// MARK: - Class used to wrapp the view inside the storyboard
+// MARK: - Wrapper
+
+
+
+/// Class used to wrapp the SelectionView inside the storyboard
 class WrapperSelectionView: UIView {
 
     var contentView: SelectionView
@@ -32,7 +36,11 @@ class WrapperSelectionView: UIView {
 
 
 
-// MARK: - Delegate protocol to communicate with the controller
+// MARK: - Delegate protocol
+
+
+
+/// Protocol that notifies the controller whenever the EditorView's style needs to be updated
 protocol SelectionViewDelegate: class {
 
     func updateEditorViewStyle(selectionViewStyle: SelectionView.Style)
@@ -41,29 +49,50 @@ protocol SelectionViewDelegate: class {
 
 
 
-// MARK: - View that is display all layout buttons selection
+// MARK: - Main view
+
+
+
+/// View that is displays all layout buttons selection
 class SelectionView: UIView {
 
-    // MARK: - Enum that defines a specific style to the view according to a user action
+    // MARK: - Properties
+
+
+
+    /// Enum that defines a specific style to the view according to a user action
     enum Style {
         case layout1, layout2, layout3
     }
 
 
 
-    // MARK: - Implementation of the delegate to communicate with the controller
+    /// Variable used to update view's buttons images according to a selected layout
+    var style : Style = .layout2 {
+        didSet {
+            setStyle(style: style)
+        }
+    }
+
+
+
+    /// Instance that allows communications with the controller
     weak var delegate: SelectionViewDelegate?
 
 
 
-    // MARK: - All outlets of the buttons view
+    // All outlets of the buttons view
     @IBOutlet weak var leftLay : UIButton!
     @IBOutlet weak var midLay : UIButton!
     @IBOutlet weak var rightLay : UIButton!
 
 
 
-    // MARK: - Buttons actions
+    // MARK: - Actions
+
+
+
+    // Actions triggered to changed the style of the EditorView
     @IBAction func didSelectLayout1() {
         self.style = .layout1
         delegate?.updateEditorViewStyle(selectionViewStyle: .layout1)
@@ -81,13 +110,11 @@ class SelectionView: UIView {
 
 
 
-    // MARK: - Style of the View set according to the current selected selection layout button
-    var style : Style = .layout2 {
-        didSet {
-            setStyle(style: style)
-        }
-    }
+    // MARK: - View's style method
 
+
+
+    /// Method that set the image of the view's buttons according to the current selected selection layout button
     private func setStyle(style: Style) {
         switch style {
         case .layout1:
@@ -111,6 +138,10 @@ class SelectionView: UIView {
 
 
     //MARK: - Loading the View
+
+
+
+    /// Called to instantiate the content view of the wrapper view
     static func loadViewFromNib() -> SelectionView {
         let bundle = Bundle(for: self)
         let nib = UINib(nibName: String(describing:self), bundle: bundle)

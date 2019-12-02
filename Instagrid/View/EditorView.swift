@@ -10,11 +10,15 @@ import UIKit
 
 
 
-// MARK: - Class used to wrapp the view inside the storyboard
+// MARK: - Wrapper
+
+
+
+/// Class used to wrapp the EditorView inside the storyboard
 class WrapperEditorView: UIView {
 
     var contentView: EditorView
-    
+
     required init?(coder aDecoder: NSCoder) {
         contentView = EditorView.loadViewFromNib()
         super.init(coder: aDecoder)
@@ -26,14 +30,18 @@ class WrapperEditorView: UIView {
         contentView.layoutMarginsGuide.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor).isActive = true
         contentView.layoutMarginsGuide.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
         contentView.layoutMarginsGuide.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor).isActive = true
-        
+
     }
 }
 
 
 
 
-// MARK: - Delegate protocol to communicate with the controller
+// MARK: - Delegate protocol
+
+
+
+/// Protocol that notifies the controller whenever an image needs to be selected
 protocol EditorViewDelegate: class {
     func addPicToButtonPressed()
 }
@@ -41,27 +49,44 @@ protocol EditorViewDelegate: class {
 
 
 
-// MARK: - View that corresponds to main grid
+// MARK: - Main view
+
+
+
+/// View that corresponds to main grid
 class EditorView: UIView {
 
-    // MARK: - Enum that defines a specific style for the EditorView layout and the SelectionView according to a user action
+    // MARK: - Properties
+
+
+
+    /// Enum that defines a specific style for the EditorView layout and the SelectionView according to a user action
     enum Style {
         case layout1, layout2, layout3
     }
 
 
 
-    // MARK: - Instance that allows communications with the controller
+    /// Property that corresponds to the view's current layout
+    var style : Style = .layout2 {
+        didSet {
+            setStyle(style: style)
+        }
+    }
+
+
+
+    /// Instance that allows communications with the controller
     weak var delegate: EditorViewDelegate?
 
 
 
-    // MARK: - Button that is sent to the UIImagePickerController so that his properties can edited in this view
+    /// The touched EditorView's button that is called in the UIImagePickerControllerDelegate so that his properties can be edited with the picked image
     var buttonPressed : UIButton?
 
 
 
-    // MARK: - All outlets of the buttons view
+    // All outlets of the buttons view
     @IBOutlet weak var upLeft: UIButton!
     @IBOutlet weak var upRight: UIButton!
     @IBOutlet weak var downLeft: UIButton!
@@ -69,7 +94,7 @@ class EditorView: UIView {
 
 
 
-    // MARK: - Outlets of the left side buttons dimensions
+    // All outlets of the left side buttons dimensions
     @IBOutlet weak var upLeftWidth: NSLayoutConstraint!
     @IBOutlet weak var downLeftWidth: NSLayoutConstraint!
     @IBOutlet weak var upLeftWidthLandscape: NSLayoutConstraint!
@@ -77,7 +102,10 @@ class EditorView: UIView {
 
 
 
-    // MARK: - Buttons actions
+    // MARK: - Actions
+
+
+    // Actions triggered to add a selected image to a pressed button
     @IBAction func didAddPic1(_ sender: Any) {
         buttonPressed = upLeft
         delegate?.addPicToButtonPressed()
@@ -97,13 +125,9 @@ class EditorView: UIView {
 
 
 
-    // MARK: - Set layout of the view
-    var style : Style = .layout2 {
-        didSet {
-            setStyle(style: style)
-        }
-    }
+    // MARK: - View's style methods
 
+    /// A method that shows or hides two given list of buttons
     private func resetHiddenProp(hiddenButtons: [UIButton], dispButtons: [UIButton]) {
 
         for button in hiddenButtons {
@@ -116,6 +140,9 @@ class EditorView: UIView {
 
     }
 
+
+
+    /// A method that manipulates all the necessary elements to make the view fit a given style
     private func setStyle(style: Style) {
         switch style {
         case .layout1:
@@ -145,6 +172,10 @@ class EditorView: UIView {
 
 
     // MARK: - Loading the view
+
+
+
+    /// Called to instantiate the content view of the wrapper view
     static func loadViewFromNib() -> EditorView {
         let bundle = Bundle(for: self)
         let nib = UINib(nibName: String(describing:self), bundle: bundle)
@@ -154,5 +185,5 @@ class EditorView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
 }

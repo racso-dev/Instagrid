@@ -10,7 +10,9 @@ import UIKit
 
 
 
-// MARK: - Class used to wrapp the view inside the storyboard
+// MARK: - Wrapper
+
+/// Class used to wrapp the SwipeView inside the storyboard
 class WrapperSwipeView: UIView {
 
     var contentView: SwipeView
@@ -32,16 +34,24 @@ class WrapperSwipeView: UIView {
 
 
 
-//MARK: - View that displays the appropriate text and arrow according to the orientation screen
+//MARK: - Main view
+
+
+
+/// View that displays the appropriate text and arrow according to the orientation screen
 class SwipeView: UIView {
 
-    // MARK: - Outlet that are modified whenever the orientation changes
+    // MARK: - Properties
+
+
+
+    /// Outlet that are modified whenever the orientation changes
     @IBOutlet weak var swipeText: UILabel!
     @IBOutlet weak var arrowDirection: UIImageView!
 
 
 
-    // MARK: - Function called when a change of screen orientation occurs
+    // MARK: - Method to edit view's properties
     override func layoutSubviews() {
 
         if UIDevice.current.orientation.isLandscape {
@@ -58,6 +68,10 @@ class SwipeView: UIView {
 
 
     // MARK: - Loading the View
+
+
+
+    /// Called to instantiate the content view of the wrapper view
     static func loadViewFromNib() -> SwipeView {
         let bundle = Bundle(for: self)
         let nib = UINib(nibName: String(describing:self), bundle: bundle)
@@ -67,5 +81,5 @@ class SwipeView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
 }
